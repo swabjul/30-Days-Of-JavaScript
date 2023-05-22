@@ -1,0 +1,47 @@
+header {
+  border-bottom: 1px solid #ccc;
+}
+
+#main {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 25px;
+}
+
+aside {
+  width: 20%;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  color: #black;
+}
+
+aside h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+aside h3 {
+  margin-left: 10px;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+main {
+  width: 80%;
+  padding: 20px;
+}
+
+main h2:first-child {
+  margin-top: 0;
+}
+
+main ol li {
+  margin-bottom: 30px;
+}
+
+main h3 {
+  border-bottom: 1px solid #ccc;
+
+}
