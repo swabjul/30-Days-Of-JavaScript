@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 Days of Javascript</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Day 1 - Introduction to Data types</h1>
+  </header>
+  <div id="main">
+    <aside>
+      <h2>Primitive Data Types</h2>
+      <ul>
+        <li>String</li>
+        <li>Number</li>
+        <li>Boolean</li>
+        <li>Undefined</li>
+        <li>Null</li>
+        <li>Symbol</li>
+      </ul>
+      <h3>String</h3>
+      <ul>
+        <li>A collection of one or more characters between two single quotes, double quotes, or backticks.</li>
+      </ul>
+      <h3>Numbers</h3>
+      <ul>
+        <li>Integers</li>
+        <li>Float-point Numbers</li>
+      </ul>
+      <h3>Boolean</h3>
+      <ul>
+        <li>A boolean value is either <strong>True</strong> or <strong>False</strong>. Any comparisons returns a boolean value, which is either true or false.</li>
+      </ul>
+      <h3>Undefined</h3>
+      <ul>
+        <li>In JavaScript, if we don't assign a value to a variable, the value is undefined. In addition to that, if a function is not returning anything, it returns undefined.</li>
+      </ul>
+      <h3>Null</h3>
+      <ul>
+        <li>Null in JavaScript means an empty value.</li>
+      </ul>
+      <h2>Checking Data Types</h2>
+      <ul>
+        <li>To check the data type of a certain variable, we use the <strong>typeof</strong> operator. See the following example.</li>
+      </ul>
+      <h2>Variables</h2>
+      <ul>
+        <li>Variables are containers of data. Variables are used to store data in a memory location. When a variable is declared, a memory location is reserved. When a variable is assigned to a value (data), the memory space will be filled with that data. To declare a variable, we use <strong>var</strong>, <strong>let</strong>, or <strong>const</strong> keywords.</li>
+      </ul>
+      <p>A valid JavaScript variable name must follow the following rules:</p>
+      <ul>
+        <li>A JavaScript variable name should not begin with a number.</li>
+        <li>A JavaScript variable name does not allow special characters except dollar sign and underscore.</li>
+        <li>A JavaScript variable name follows a camelCase convention.</li>
+        <li>A JavaScript variable name should not have space between words.</li>
+      </ul>
+    </aside>
+    <main>
+      <h2>Day 1: Exercises</h2>
+      <ol>
+        <li>Write a single line comment which says, comments can make code readable<br>
+          <pre style="color: #ccc">
+            // comments can make code readable
+          </pre>
+        </li>
+        <li>Write another single comment which says, Welcome to 30DaysOfJavaScript<br>
+          <pre style="color: #ccc">
+            // Welcome to 30DaysOfJavaScript
+          </pre>
+        </li>
+        <li>Write a multiline comment which says, comments can make code readable, easy to reuse and informative<br>
+          <pre style="color: #ccc">
+            /* 
+            comments can make code readable, easy to reuse and informative
+            */
+          </pre>
+        </li>
+        <li>Create a variable.js file and declare variables and assign string, boolean, undefined and null data types<br>
+          <pre style="color: #ccc">
+            // string
+            const name = "Swab";
+
+            // boolean
+            const isSingle = true;
+
+            // undefined
+            const girlfriend;
+
+            // null
+            const children = null;
+          </pre>
+        </li>
+        <li>Create datatypes.js file and use the JavaScript typeof operator to check different data types. Check the data type of each variable<br>
+          <pre style="color: #ccc">
+            console.log(name);
+            console.log(isSingle);
+            console.log(girlfriend);
+            console.log(children);
+          </pre>
+        </li>
+        <li>Declare four variables without assigning values<br>
+          <pre style="color: #ccc">
+            const name;
+            const nickname;
+            const age;
+            const birthday;
+          </pre>
+        </li>
+        <li>Declare four variables with assigned values<br>
+          <pre style="color: #ccc">
+            name = "Swab";
+            nickname = "Zj";
+            age = "Still Young";
+            birthday = "November";
+          </pre>
+        </li>
+        <li>Declare variables to store your first name, last name, marital status, country and age in multiple lines<br>
+          <pre style="color: #ccc">
+            const firstName = "Zouave Jul";
+            const lastName = "Bulawan";
+            const isMarried = "Widowed";
+            const country = "Philippines";
+            const age = 18;
+            
+            console.log(firstName);
+            console.log(lastName);
+            console.log(isMarried);
+            console.log(country);
+            console.log(age);
+          </pre>
+        </li>
+        <li>Declare variables to store your first name, last name, marital status, country and age in a single line<br>
+          <pre style="color: #ccc">
+            const firstName = "Zouave Jul";
+            const lastName = "Bulawan";
+            const isMarried = "Widowed";
+            const country = "Philippines";
+            const age = 18;
+            
+            console.log(firstName, lastName, isMarried, country, age)
+          </pre>
+        </li>
+        <li>Declare two variables myAge and yourAge and assign them initial values and log to the browser console.<br>
+          <pre style="color: #ccc">
+            const myAge = 25;
+            const yourAge = 30;
+
+            console.log("I am " + myAge + " years old.");
+            console.log("You are " + yourAge +" years old.");
+          </pre>
+        </li>
+      </ol>
+    </main>
+  </div>
+</body>
+</html>
