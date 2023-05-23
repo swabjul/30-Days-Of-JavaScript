@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 Days of Javascript</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Day 3 - Booleans, Operators, Date</h1>
+  </header>
+  <div id="main">
+    <aside>
+      <h2>Booleans </h2>
+      <p>A boolean data type represents one of the two values:true or false. Boolean value is either true or false. The use of these data types will be clear when you start the comparison operator. Any comparisons return a boolean value which is either true or false.</p>
+      <h3>Truthy values</h3>
+      <ul>
+        <li>All numbers(positive and negative) are truthy except zero</li>
+        <li>All strings are truthy except an empty string ('')</li>
+        <li>The boolean true</li>
+      </ul>
+      <h3>Falsy values</h3>
+      <ul>
+        <li>0</li>
+        <li>0n</li>
+        <li>null</li>
+        <li>undefined</li>
+        <li>NaN</li>
+        <li>the boolean false</li>
+        <li>'', "", ``, empty string</li>
+      </ul>
+      <h2>Undefined</h2>
+      <p>If we declare a variable and if we do not assign a value, the value will be undefined. In addition to this, if a function is not returning the value, it will be undefined.</p>
+      <h2>Null</h2>
+      <code>
+        let empty = null<br>
+        console.log(empty) <br>// -> null , means no value
+      </code>
+      <h2>Operators</h2>
+      <h3>Assignment operators</h3>
+      <p>An equal sign in JavaScript is an assignment operator. It uses to assign a variable.</p>
+      <h3>Arithmetic Operators</h3>
+      <p>Arithmetic operators are mathematical operators.</p>
+      <ul>
+        <li>Addition(+): a + b</li>
+        <li>Subtraction(-): a - b</li>
+        <li>Multiplication(*): a * b</li>
+        <li>Division(/): a / b</li>
+        <li>Modulus(%): a % b</li>
+        <li>Exponential(**): a ** b</li>
+      </ul>
+      <h2>Comparison Operators</h2>
+      <ul>
+        <li>== <span style="color: #ccc">// Equal is value only: Equivalent</pre></li>
+        <li>=== <span style="color: #ccc">// Equal is value and adate type: Equivalent</pre></li>
+        <li>!= <span style="color: #ccc">// Not equal</pre></li>
+        <li>&gt; <span style="color: #ccc">// Greater than</pre></li>
+        <li>&lt; <span style="color: #ccc">// Less than</pre></li>
+        <li>&gt;= <span style="color: #ccc">// Greater than or equal to</pre></li>
+        <li>&lt;= <span style="color: #ccc">// Less than or equal to</pre></li>
+      </ul>
+      <h2>Logical Operators</h2>
+      <ul>
+        <li>&&	<span style="color: #ccc">// And</span></li>
+        <li>||	<span style="color: #ccc">// Or</span></li>
+        <li>!	<span style="color: #ccc">// Not</span></li>
+      </ul>
+      <h2>Ternary Operators</h2>
+      <ul>
+        <li>condition ? exprIfTrue : exprIfFalse</li>
+      </ul>
+    </aside>
+    <main>
+      <h2>Day 3: Exercises</h2>
+      <h3>Exercise: Level 1</h3>
+      <ol>
+        <li>Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.<br>
+          <pre style="color: #ccc">
+            //  const firstName = "Swab";
+                const lastName = "Jul";
+                const country = "Philippines";
+                const city = "Cebu";
+                const isMarried = false;
+                const year = 2023;
+                
+                console.log(typeof firstName);
+                console.log(typeof lastName);
+                console.log(typeof country);
+                console.log(typeof city);
+                console.log(typeof isMarried);
+                console.log(typeof year);
+
+            //  string
+                script.js:9 string
+                script.js:10 string
+                script.js:11 string
+                script.js:12 boolean
+                script.js:13 number    
+          </pre>
+        </li>
+        <li>Check if type of '10' is equal to 10<br>
+          <pre style="color: #ccc">
+            // console.log("10" === 10)
+
+            // false
+          </pre>
+        </li>
+        <li>Check if parseInt('9.8') is equal to 10 <br>
+          <pre style="color: #ccc">
+            // console.log(parseInt('9.8') === 10)
+
+            //false
+          </pre>
+        </li>
+        <li>Boolean value is either true or false.
+          <ol style="list-style-type: lower-roman;">
+            <li>Write three JavaScript statement which provide truthy value.
+              <pre style="color: #ccc">
+                //  const b = 0
+                    const a = "";
+                    const c = false;
+              </pre>
+            </li>
+            <li>Write three JavaScript statement which provide falsy value.
+              <pre style="color: #ccc">
+                //  const d = 1234;
+                    const e = "One Two Three Four"
+                    const f = true
+              </pre>
+            </li>
+          </ol>
+          <br>
+
+        </li>
+        <li>Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
+          <ol style="list-style-type: lower-roman;">
+            <li>4 > 3 <span style="color: #ccc">// true</span></li>
+            <li>4 >= 3 <span style="color: #ccc">// true</span></li>
+            <li>4 < 3 <span style="color: #ccc">// false</span></li>
+            <li>4 <= 3 <span style="color: #ccc">// false</span></li>
+            <li>4 == 4 <span style="color: #ccc">// true</span></li>
+            <li>4 === 4 <span style="color: #ccc">// true</span></li>
+            <li>4 != 4 <span style="color: #ccc">// false</span></li>
+            <li>4 !== 4 <span style="color: #ccc">// false</span></li>
+            <li>4 != '4' <span style="color: #ccc">// false</span></li>
+            <li>4 == '4' <span style="color: #ccc">// true</span></li>
+            <li>4 === '4' <span style="color: #ccc">// false</span></li>
+            <li>Find the length of python and jargon and make a falsy comparison statement. <br>
+              <pre style="color: #ccc">
+                // const pyLength = "python".length;
+                   const jarLength = "jargon".length;
+                   pyLength <  jarLength
+
+                // false   
+              </pre>
+              </li>
+          </ol>
+        </li>
+        <li>Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
+          <ol style="list-style-type: lower-roman;">
+            <li>4 > 3 && 10 < 12 <span style="color: #ccc">// true</span></li>
+            <li>4 > 3 && 10 > 12 <span style="color: #ccc">// false</span></li>
+            <li>4 > 3 || 10 < 12 <span style="color: #ccc">// true</span></li>
+            <li>4 > 3 || 10 > 12 <span style="color: #ccc">// true</span></li>
+            <li>!(4 > 3) <span style="color: #ccc">// false</span></li>
+            <li>!(4 < 3) <span style="color: #ccc">// true</span></li>
+            <li>!(false) <span style="color: #ccc">// true</span></li>
+            <li>!(4 > 3 && 10 < 12) <span style="color: #ccc">// false</span></li>
+            <li>!(4 > 3 && 10 > 12) <span style="color: #ccc">// true</span></li>
+            <li>!(4 === '4') <span style="color: #ccc">// true</span></li>
+            <li>There is no 'on' in both dragon and python  <br>
+              <pre style="color: #ccc">
+                // console.log(!("dragon".includes("on") && ("jargon").includes("on")));
+
+                // false   
+              </pre>
+            
+            
+            </li>
+          </ol>
+        </li>
+        <li>Use the Date object to do the following activities
+          <ol style="list-style-type: lower-roman;">
+            <li>What is the year today?</li>
+            <li>What is the month today as a number?</li>
+            <li>What is the date today?</li>
+            <li>What is the day today as a number?</li>
+            <li>What is the hours now?</li>
+            <li>What is the minutes now?</li>
+            <li>Find out the numbers of seconds elapsed from January 1, 1970 to now.</li>
+          </ol>
+          <pre style="color: #ccc">
+            //  const now = new Date();
+                console.log(now.getFullYear());
+                console.log(now.getMonth() + 1);
+                console.log(now.getDate());
+                console.log(now.getDay());
+                console.log(now.getHours());
+                console.log(now.getMinutes());
+                console.log(now.getTime());
+
+            //  2023
+                5
+                23
+                2
+                13
+                22
+                1684819329009  
+          </pre>
+        </li>
+      </ol>
+      <h3>Exercise: Level 2</h3>
+      <ol>
+        <li>Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+          <pre>
+            Enter base: 20
+            Enter height: 10
+            The area of the triangle is 100
+          </pre>
+          <pre style="color: #ccc">
+            //  const getBase = prompt("Enter Here", "Enter Base Value");
+                const getHeight = prompt("Enter Here", "Enter Height Value");
+                const getArea = 0.5 * getBase * getHeight;
+
+            //  100    
+          </pre>
+        </li>
+        <li>Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+          <pre>
+            Enter side a: 5
+            Enter side b: 4
+            Enter side c: 3
+            The perimeter of the triangle is 12
+          </pre>
+          <pre style="color: #ccc">
+            //  const getSideA = parseInt(prompt("Here here", "Side A"));
+                const getSideB = parseInt(prompt("Here here", "Side B"));
+                const getSideC = parseInt(prompt("Here here", "Side c"));
+                const getPerimeter = getSideA + getSideB + getSideC;
+                console.log(getPerimeter);
+
+            // 12
+          </pre>
+        </li>
+        <li>Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))<br>
+          <pre style="color: #ccc">
+            //  const getLength = parseInt(prompt("Enter Here", "Enter Height"));
+                const getWidth = parseInt(prompt("Enter Here", "Enter Width"));
+                const area = getLength * getWidth;
+                const perimeter = 2 * (getLength + getWidth);
+            
+                console.log(area);
+                console.log(perimeter);
+          </pre>
+        </li>
+        <li>Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.<br>
+          <pre style="color: #ccc">
+            //  const radius = prompt("Enter Here","Enter Radius");
+                const PI = Math.PI;
+                const area = PI * radius * radius;
+                const circumference = 2 * PI * radius;
+                
+                console.log(area);
+                console.log(circumference);
+          </pre>
+        </li>
+        <li>Calculate the slope, x-intercept and y-intercept of y = 2x -2<br>
+          <pre style="color: #ccc">
+            //  const b = -2
+                const m = 2;
+                const y_intercept = m*0 +(b);
+                const x_intercept =  -1 * (b / m);
+                console.log(`Slope: ${m}`);
+                console.log(`Y-Intercept: ${y_intercept}`);
+                console.log(`X-Intercept: ${x_intercept}`);
+
+            //  Slope: 4
+                script.js:17 Y-Intercept: 3
+                script.js:18 X-Intercept: -0.75    
+          </pre>
+        </li>
+        <li>Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)<br>
+          <pre style="color: #ccc">
+            //  const x1 = prompt("Enter Here", "Enter x1");
+                const y1 = prompt("Enter Here", "Enter y1");
+                const x2 = prompt("Enter Here", "Enter x2");
+                const y2 = prompt("Enter Here", "Enter y2");
+                const m = (y2-y1) / (x2-x1)   
+                console.log(m);
+
+            // 2
+          </pre>
+        </li>
+        <li>Compare the slope of above two questions.<br>
+          <pre style="color: #ccc">
+            // 4 === 2
+
+            // false :D
+          </pre>
+        </li>
+        <li>Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.<br>
+          <pre style="color: #ccc">
+            //  const x = prompt("Enter Here", "Enter x value");
+                const y = (x**2) + (6 * x) + 9;
+                console.log(y);
+
+            // x is -3 to get y = 0
+          </pre>
+        </li>
+        <li>Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?<br>
+          <pre>
+            Enter hours: 40
+            Enter rate per hour: 28
+            Your weekly earning is 1120
+          </pre>
+          <pre style="color: #ccc">
+            //  const hours = prompt("Enter Here", "Enter how many hours");
+                const hourRate = prompt("Enter Here", "Enter rate per hour")
+                const weeklyEarning = hours * hourRate;
+                console.log(weeklyEarning);
+
+            //  1120    
+          </pre>
+        </li>
+        <li>If the length of your name is greater than 7 say, your name is long else say your name is short.<br>
+          <pre style="color: #ccc">
+            //  let name = prompt("Enter Here", "Enter your name")
+                name.length > 7 ? console.log("Your name is long") : console.log("You name is short")
+          </pre>
+        </li>
+        <li>Compare your first name length and your family name length and you should get this output.<br>
+          <pre>
+            let firstName = 'Asabeneh'
+            let lastName = 'Yetayeh'
+
+            Your first name, Asabeneh is longer than your family name, Yetayeh
+
+          </pre>
+          <pre style="color: #ccc">
+            //  const firstName = "Asabeneh";
+                const lastName = "Yetayeh"
+                
+                firstName.length > lastName.length 
+                ? console.log(`Your first name, ${firstName} is longer than your family name, ${lastName}`)
+                : null
+          </pre>
+        </li>
+        <li>Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.<br>
+          <pre>
+            let myAge = 250
+            let yourAge = 25
+
+            I am 225 years older than you.
+          </pre>
+          <pre style="color: #ccc">
+            //  const firstName = "Asabeneh";
+                const lastName = "Yetayeh"
+                
+                firstName.length > lastName.length 
+                ? console.log(`Your first name, ${firstName} is longer than your family name, ${lastName}`)
+                : null
+          </pre>
+        </li>
+        <li>Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.<br>
+          <pre>
+            Enter birth year: 1995
+            You are 25. You are old enough to drive
+
+            Enter birth year: 2005
+            You are 15. You will be allowed to drive after 3 years.
+          </pre>
+          <pre style="color: #ccc">
+            //  const birthYear = prompt("Enter Here", "Enter birth year:")
+                const year = new Date().getFullYear();
+                const age = year - birthYear;
+                
+                age >= 18 ? console.log(`You are ${age}. You are old enough to drive`)
+                : age = 15 ? console.log(`You are ${age}. Yo will be allow to drive after 3 years`)
+                : "";
+          </pre>
+        </li>
+        <li>Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years<br>
+          <pre>
+            Enter number of years you live: 100
+            You lived 3153600000 seconds.
+          </pre>
+          <pre style="color: #ccc">
+            //  const age = prompt("Enter Here", "Enter number of years");
+                const ageSeconds = age * 31536000 ;
+            
+                console.log(ageSeconds);
+          </pre>
+        </li>
+        <li>Create a human readable time format using the Date time object<br>
+          <ol style="list-style-type: lower-roman;">
+            <li>YYYY-MM-DD HH:mm</li>
+            <li>DD-MM-YYYY HH:mm</li>
+            <li>DD/MM/YYYY HH:mm</li>
+          </ol>
+          <pre style="color: #ccc">
+            //  YYYY-MM-DD HH:mm
+                  console.log(`${year}-${month}-${day} ${hour}:${minute}`);
+
+            //  DD-MM-YYYY HH:mm
+                  console.log(`${day}-${month}-${year} ${hour}:${minute}`);
+
+            //  DD/MM/YYYY HH:mm
+                  console.log(`${day}/${month}/${year} ${hour}:${minute}`);
+
+            //  2023-4-23 17:26
+                23-4-2023 17:26
+                23/4/2023 17:26  
+          </pre>
+        </li>
+      </ol>
+      <h3>Exercise: Level 3</h3>
+      <ol>
+        <li>'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word love in this sentence.<br>
+          <pre style="color: #ccc">
+            // const string = "Love is the best thing in this world. Some found their love and some are still looking for their love.";
+            // console.log(string.toLowerCase().match(/love/g))
+            // (3) ['love', 'love', 'love']
+          </pre>
+        </li>
+        <li>Use match() to count the number of all because in the following sentence:'You cannot end a sentence with because because because is a conjunction'<br>
+          <pre style="color: #ccc">
+            // const string = "You cannot end a sentence with because because because is a conjunction";
+            // console.log(string.toLowerCase().match(/because/g))
+            // (3) ['because', 'because', 'because']
+          </pre>
+        </li>
+        <li>Clean the following text and find the most frequent word (hint, use replace and regular expressions).<br>    const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'<br>
+          <pre style="color: #ccc">
+            // const regEx = /[%@#$%&!;]/g;
+            // let sentence = "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
+            // I am a teacher, and I love teaching. There is nothing as more rewarding as educating and empowering people. I found teaching more interesting than any other jobs. Does this motivate you to be a teacher? This 30DaysOfJavaScript is also the result of love of teaching
+          </pre>
+        </li>
+        <li>Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'<br>
+          <pre style="color: #ccc">
+            // const sentence = "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month."
+            // let perMonth = sentence.replace(/per month/g, "* 12");
+            // perMonth = perMonth.replace(/\,/g, " +");
+            // const annual = perMonth.replace(/[a-zA-z]/g, "");
+            //  const result = eval(annual);
+            // 250000
+          </pre>
+        </li>
+      </ol>
+    </main>
+  </div>
+</body>
+</html>
