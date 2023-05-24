@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 Days of Javascript</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Day 4 - Arrays</h1>
+  </header>
+  <div id="main">
+    <aside>
+      <p>In contrast to variables, an array can store multiple values. Each value in an array has an index, and each index has a reference in a memory address. Each value can be accessed by using their indexes. The index of an array starts from zero, and the index of the last element is less by one from the length of the array.<br>An array is a collection of different data types which are ordered and changeable(modifiable). An array allows storing duplicate elements and different data types. An array can be empty, or it may have different data type values.</p>
+      <h2>How to create an empty array</h2>
+      <ul>
+        <li>Using Array constructor
+          <pre>
+          // syntax
+          const arr = Array()
+          // or
+          // let arr = new Array()
+          console.log(arr) // []           
+          </pre>
+        </li>
+        <li>Using square brackets([])<br>This the most recommended way to create an empty list
+          <pre>
+          // syntax
+          const arr = []
+          console.log(arr)  
+          </pre>
+        </li>
+      </ul>
+      <h2>Methods to manipulate array</h2>
+      <ul>
+        <li>Array</li>
+        <li>length</li>
+        <li>concat</li>
+        <li>indexOf</li>
+        <li>slice</li>
+        <li>splice</li>
+        <li>join</li>
+        <li>toString</li>
+        <li>includes</li>
+        <li>lastIndexOf</li>
+        <li>isArray</li>
+        <li>fill</li>
+        <li>push</li>
+        <li>pop</li>
+        <li>shift</li>
+        <li>unshift</li>
+      </ul>
+
+      <h3>Array Constructor</h3>
+      <p>Array:To create and array.</p>
+      <code>
+        const arr = Array() <span style="color: #ccc; font-size: 10px; margin-left: 10px;">// creates an an empty array</span><br>
+      </code>
+
+      <h3>Creating static values with fill</h3>
+      <p>fill: Fill all the array elements with a static value</p>
+      <code>
+        const arr = Array() <span style="color: #ccc; font-size: 10px; margin-left: 10px">// creates an an empty array</span><br>
+        const eightXvalues = Array(8).fill('X')  <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// it creates eight element values filled with 'X'</span><br>
+        console.log(eightXvalues) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// ['X', 'X','X','X','X','X','X','X']</span>
+      </code>
+
+      <h3>Concatenating array using concat</h3>
+      <p>concat:To concatenate two arrays. </p>
+      <code>
+        const firstList = [1, 2, 3]<br>
+        const secondList = [4, 5, 6]<br>
+        const thirdList = firstList.concat(secondList)<br>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// [1, 2, 3, 4, 5, 6]</span>
+      </code>
+
+      <h3>Getting array length</h3>
+      <p>Length:To know the size of the array</p>
+      <code>
+        const numbers = [1, 2, 3, 4, 5]<br>
+        console.log(numbers.length) <br>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> 5 is the size of the array</span>
+      </code>
+
+      <h3>Getting index an element in arr array</h3>
+      <p>indexOf:To check if an item exist in an array. If it exists it returns the index else it returns -1.</p>
+      <code>
+        const numbers = [a, b, c, d, e] <br>
+        console.log(numbers.indexOf(e)) // -> 4<br>
+        console.log(numbers.indexOf(0)) // -> -1<br>
+        console.log(numbers.indexOf(a)) // -> 0<br>
+        console.log(numbers.indexOf(f)) // -> -1<br>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// if the element not found index is -1</span>
+      </code>
+
+      <h3>Getting last index of an element in array</h3>
+      <p>lastIndexOf: It gives the position of the last item in the array. If it exist, it returns the index else it returns -1.</p>
+      <code>
+        const numbers = [1, 2, 3, 4, 5, 3, 1, 2]<br><br>
+
+        console.log(numbers.lastIndexOf(2)) // 7<br>
+        console.log(numbers.lastIndexOf(0)) // -1<br>
+        console.log(numbers.lastIndexOf(1)) //  6<br>
+        console.log(numbers.lastIndexOf(4)) //  3<br>
+        console.log(numbers.lastIndexOf(6)) // -1<br>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// if the element not found index is -1</span>
+      </code>
+
+      <h3>To check if an item exist in an array</h3>
+      <p>includes:To check if an item exist in an array. If it exist it returns the true else it returns false.</p>
+      <code>
+        const webTechs = [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'React',
+          'Redux',
+          'Node',
+          'MongoDB'
+        ] <br>// List of web technologies<br><br>
+
+console.log(webTechs.includes('Node')) <br> <span style="color: #ccc; font-size: 10px; margin-left: 10px">// true</span><br>
+console.log(webTechs.includes('C')) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// false</span>
+      </code>
+
+      <h3>Checking array</h3>
+      <p>Array.isArray:To check if the data type is an array</p>
+      <code>
+        const numbers = [1, 2, 3, 4, 5]<br>
+        console.log(Array.isArray(numbers)) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// true</span><br><br>
+
+        const number = 100<br>
+        console.log(Array.isArray(number)) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// false</span>
+      </code>
+
+      <h3>Converting array to string</h3>
+      <p>toString:Converts array to string </p>
+      <code>
+        const numbers = [1, 2, 3, 4, 5]<br>
+        console.log(numbers.toString()) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// 1,2,3,4,5</span><br><br>
+
+        const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']<br>
+        console.log(names.toString()) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// Asabeneh,Mathias,Elias,Brook</span>
+      </code>
+
+      <h3>Joining array elements</h3>
+      <p>join: It is used to join the elements of the array, the argument we passed in the join method will be joined in the array and return as a string. By default, it joins with a comma, but we can pass different string parameter which can be joined between the items.</p>
+      <code>
+        const webTechs = [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'React',
+          'Redux',
+          'Node',
+          'MongoDB'
+        ] <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// List of web technologies</span><br><br>
+        console.log(webTechs.join())       <span style="color: #ccc; font-size: 10px; margin-left: 10px">// "HTML,CSS,JavaScript,React,Redux,Node,MongoDB"</span><br>
+        console.log(webTechs.join(' # '))  <span style="color: #ccc; font-size: 10px; margin-left: 10px">// "HTML # CSS # JavaScript # React # Redux # Node # MongoDB"</span>
+      </code>
+
+      <h3>Slice array elements</h3>
+      <p>Slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position.</p>
+      <code>
+        const numbers = [1,2,3,4,5]<br><br>
+
+        console.log(numbers.slice()) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> it copies all  item</span><br>
+        console.log(numbers.slice(0)) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> it copies all  item</span><br>
+        console.log(numbers.slice(0, numbers.length)) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// it copies all  item</span><br>
+        console.log(numbers.slice(1,4)) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> [2,3,4] <br> // it doesn't include the ending position</span><br>
+      </code>
+
+      <h3>Splice method in array</h3>
+      <p>Splice: It takes three parameters:Starting position, number of times to be removed and number of items to be added.</p>
+      <code>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// Syntax</span><br>
+        splice(start, deleteCount, item1, item2, itemN)<br><br>
+
+        const numbers = [1, 2, 3, 4, 5, 6]<br>
+        numbers.splice(3, 3, 7, 8, 9)<br>
+        console.log(numbers.splice(3, 3, 7, 8, 9))<br>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> [1, 2, 3, 7, 8, 9] //it removes three item and replace three items</span>
+      </code>
+
+      <h3>Adding item to an array using push</h3>
+      <p>Push: adding item in the end. To add item to the end of an existing array we use the push method.</p>
+      <code>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// Syntax</span><br>
+        push()<br>
+        push(element0)<br>
+        push(element0, element1)<br>
+        push(element0, element1, /* … ,*/ elementN)<br><br>
+
+        const numbers = [1, 2, 3, 4, 5]<br>
+        numbers.push(6)<br>
+        console.log(numbers) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> [1,2,3,4,5,6]</span>
+      </code>
+
+      <h3>Removing the end element using pop</h3>
+      <p>pop: Removing item in the end.</p>
+      <code>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// Syntax</span><br>
+        pop()<br><br>
+
+        const numbers = [1, 2, 3, 4, 5]<br>
+        numbers.pop() <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> remove one item from the end</span><br>
+        console.log(numbers) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> [1,2,3,4]</span><br>
+      </code>
+
+      <h3>Removing an element from the beginning</h3>
+      <p>shift: Removing one array element in the beginning of the array.</p>
+      <code>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// Syntax</span><br>
+        shift()<br><br>
+
+        const numbers = [1, 2, 3, 4, 5]<br>
+        numbers.shift() <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> remove one item from the beginning</span><br>
+        console.log(numbers) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> [2,3,4,5]</span><br>
+      </code>
+
+      <h3>Add an element from the beginning</h3>
+      <p>unshift: Adding array element in the beginning of the array.</p>
+      <code>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// Syntax</span><br>
+        unshift()<br>
+        unshift(element0)<br>
+        unshift(element0, element1)<br>
+        unshift(element0, element1, /* … ,*/ elementN)<br><br>
+
+        const numbers = [1, 2, 3, 4, 5]<br>
+        numbers.unshift(0) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> add one item from the beginning</span><br>
+        console.log(numbers) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> [0,1,2,3,4,5]</span><br>
+      </code>
+
+      <h3>Reversing array order</h3>
+      <p>reverse: reverse the order of an array.</p>
+      <code>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// Syntax</span><br>
+        reverse()<br><br>
+
+        const numbers = [1, 2, 3, 4, 5]<br>
+        numbers.reverse() <span style="color: #ccc; font-size: 10px; margin-left: 10px">// -> reverse array order</span><br>
+        console.log(numbers) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// [5, 4, 3, 2, 1]</span><br><br>
+
+        numbers.reverse()<br>
+        console.log(numbers) <span style="color: #ccc; font-size: 10px; margin-left: 10px">// [1, 2, 3, 4, 5]</span><br>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// aaaaaaaaaaaaaaaaaaaa</span>
+      </code>
+
+      <h3>Sorting elements in array</h3>
+      <p>sort: arrange array elements in ascending order. Sort takes a call back function, we will see how we use sort with a call back function in the coming sections. </p>
+      <code>
+        <span style="color: #ccc; font-size: 10px; margin-left: 10px">// Syntax</span><br>
+        sort()<br>
+        sort(compareFn)<br><br>
+
+        const webTechs = [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'React',
+          'Redux',
+          'Node',
+          'MongoDB'
+        ]<br><br>
+
+          webTechs.sort()<br>
+          console.log(webTechs) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// ["CSS", "HTML", "JavaScript", "MongoDB", "Node", "React", "Redux"]</span><br>
+
+          webTechs.reverse() <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// after sorting we can reverse it</span><br>
+          console.log(webTechs) <br><span style="color: #ccc; font-size: 10px; margin-left: 10px">// ["Redux", "React", "Node", "MongoDB", "JavaScript", "HTML", "CSS"]</span><br>
+      </code>
+    </aside>
+    <main>
+      <h2>Day 4: Exercises</h2>
+      <h3>Exercise: Level 1</h3>
+      <ol>
+        <li>Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:'You are old enough to drive' but if not 18 give another feedback stating to wait for the number of years he needs to turn 18.
+          <pre>
+            Enter your age: 30
+            You are old enough to drive.
+
+            Enter your age:15
+            You are left with 3 years to drive.
+          </pre>
+          <pre style="color: #ccc">
+            //  const age = prompt("Enter Here", "Enter your age:");
+                const ageOldEnough = 18 - age;
+                
+                if (age >= 18) {
+                  console.log("You are old enough to drive");
+                } else {
+                  console.log(`You are left with ${ageOldEnough} years to drive`);
+                }
+          </pre>
+        </li>
+        <li>Compare the values of myAge and yourAge using if … else. Based on the comparison and log the result to console stating who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
+          <pre>
+            Enter your age: 30
+            You are 5 years older than me.
+          </pre>
+          <pre style="color: #ccc">
+            //  const myAge = prompt("Enter Here", "Enter your age:");
+                const yourAge = 35;
+                
+                if (myAge < yourAge) {
+                  console.log(`You are ${yourAge - myAge} years older than me.`);
+                }
+          </pre>
+        </li>
+        <li>If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement it in to ways
+          <pre>
+            - using if else
+            - ternary operator.
+
+            let a = 4
+            let b = 3
+
+            4 is greater than 3
+          </pre>
+          <pre style="color: #ccc">
+            //  let a = 4
+                let b = 3
+
+                // using if else
+                if (a > b) {
+                  console.log(`${a} is greater than ${b}`);
+                } else {
+                  console.log(`${a} is less than ${b}`);
+                }
+
+                // using ternary operator
+                a > b ? console.log(`${a} is greater than ${b}`) : console.log(`${a} is less than ${b}`);
+          </pre>
+        </li>
+        <li>Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
+          <pre>
+            Enter a number: 2
+            2 is an even number
+
+            Enter a number: 9
+            9 is is an odd number.
+          </pre>
+          <pre style="color: #ccc"> 
+            //  const num = prompt("Enter Here", "Enter a number:");
+
+                if (num % 2 == 0) {
+                  console.log(`${num} is an even number.`);
+                } else {
+                  console.log(`${num} is an odd number.`);
+                }
+          </pre>
+        </li>
+      </ol>
+      <h3>Exercise: Level 2</h3>
+      <ol>
+        <li>Write a code which can give grades to students according to theirs scores:
+          <pre>
+            - 80-100, A
+            - 70-89, B
+            - 60-69, C
+            - 50-59, D
+            - 0-49, F
+          </pre>
+          <pre style="color: #ccc"> 
+            const score = prompt("Enter Here", "Enter your score");
+
+            if (score >= 80 && score < 100) {
+              console.log("You got A")
+            } else if (score >= 70 && score < 80) {
+              console.log("You got B");
+            } else if (score >= 60 && score < 70) {
+              console.log("You got C");
+            } else if (score >= 50 && score < 60) {
+              console.log("You got D");
+            } else {
+              console.log("You got F");
+            }
+          </pre>
+        </li>
+        <li>Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+          <pre>
+            - September, October or November, the season is Autumn.
+            - December, January or February, the season is Winter.
+            - March, April or May, the season is Spring
+            - June, July or August, the season is Summer
+          </pre>
+          <pre style="color: #ccc">
+            //  const month = (prompt("Enter Here", "Enter the month here:")).toLowerCase();
+                let season = "";
+                
+                if (month === "september" || month === "october" || month === "november") {
+                      season = "Autumn";
+                    } else if (month === "december" || month === "january" || month === "febuary") {
+                      season = "Winter";
+                    } else if (month === "march" || month === "april" ||  month === "may") {
+                      season = "Spring";
+                    } else if (month === "june" || month === "july" ||  month === "august") {
+                      season = "Summer";
+                    }
+                
+                console.log(`${month.toUpperCase()} is a season of ${season}`);
+          </pre>
+        </li>
+        <li>Check if a day is weekend day or a working day. Your script will take day as an input.
+          <pre>
+            What is the day  today? Saturday
+            Saturday is a weekend.
+        
+            What is the day today? saturDaY
+            Saturday is a weekend.
+        
+            What is the day today? Friday
+            Friday is a working day.
+        
+            What is the day today? FrIDAy
+            Friday is a working day.
+          </pre>
+          <pre style="color: #ccc">
+            //  const day = (prompt("Enter Here", "What is the day today?")).toLowerCase();
+
+                switch (day) {
+                  case "monday":
+                  case "tuesday":
+                  case "wednesday":
+                  case "thursday":
+                  case "friday":
+                    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a working day`)
+                    break;
+                  case "saturday":
+                  case "sunday":
+                    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a weekend`)
+                    break;
+                  default:
+                    console.log(`Input is invalid`);
+                }
+          </pre>
+        </li>
+      </ol>
+      <h3>Exercise: Level 3</h3>
+      <ol>
+        <li>Write a program which tells the number of days in a month.
+          <pre>
+            Enter a month: January
+            January has 31 days.
+          
+            Enter a month: JANUARY
+            January has 31 day
+          
+            Enter a month: February
+            February has 28 days.
+          
+            Enter a month: FEbruary
+            February has 28 days.
+          </pre>
+          <pre style="color: #ccc"> 
+            //  const month = (prompt("Enter Here:", "Enter the month")).toLowerCase();
+
+                switch (month) {
+                
+                  case "january":
+                  case "march":
+                  case "may":
+                  case "july":
+                  case "august":
+                  case "october":
+                  case "december":
+                    console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 31 days`);
+                    break;
+                  case "april":
+                  case "june":
+                  case "september":
+                  case "november":
+                    console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 30 days`);
+                    break;
+                  case "february":
+                    console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 28 days`);
+                    break;
+                  default:
+                    console.log("Invalid input")  
+                    
+                }
+          </pre>
+        </li>
+
+      </ol>
+    </main>
+  </div>
+</body>
+</html>
