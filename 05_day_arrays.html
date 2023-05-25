@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <h1>Day 4 - Arrays</h1>
+    <h1>Day 5 - Arrays</h1>
   </header>
   <div id="main">
     <aside>
@@ -275,168 +275,327 @@ console.log(webTechs.includes('C')) <span style="color: #ccc; font-size: 10px; m
       </code>
     </aside>
     <main>
-      <h2>Day 4: Exercises</h2>
+      <h2>Day 5: Exercises</h2>
       <h3>Exercise: Level 1</h3>
+      <pre>
+        <code>
+
+          const countries = [
+            'Albania',
+            'Bolivia',
+            'Canada',
+            'Denmark',
+            'Ethiopia',
+            'Finland',
+            'Germany',
+            'Hungary',
+            'Ireland',
+            'Japan',
+            'Kenya'
+          ]
+
+          const webTechs = [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'MongoDB'
+          ]
+        </code>
+      </pre>
+
       <ol>
-        <li>Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:'You are old enough to drive' but if not 18 give another feedback stating to wait for the number of years he needs to turn 18.
-          <pre>
-            Enter your age: 30
-            You are old enough to drive.
-
-            Enter your age:15
-            You are left with 3 years to drive.
-          </pre>
+        <li>Declare an empty array;
           <pre style="color: #ccc">
-            //  const age = prompt("Enter Here", "Enter your age:");
-                const ageOldEnough = 18 - age;
+            //  const array = [];
+          </pre>
+        </li>
+        <li>Declare an array with more than 5 number of elements
+          <pre style="color: #ccc">
+            //  const array = [1, 2, 3, 4, 5];
+          </pre>
+        </li>
+        <li>Find the length of your array
+          <pre style="color: #ccc">
+            //  const array = [1, 2, 3, 4, 5];
+                console.log(array.length);
+          </pre>
+        </li>
+        <li>Get the first item, the middle item and the last item of the array
+          <pre style="color: #ccc">
+            //  const array = [1, 2, 3, 4, 5];
+                console.log(`First Item: ${array[0]}`);
+                console.log(`Middle Item: ${array[2]}`);
+                console.log(`Last Item: ${array[4]}`);
+          </pre>
+        </li>
+        <li>Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
+          <pre style="color: #ccc">
+            //  const mixedDataTypes = [
+                  "Javascript",
+                  true,
+                  30,
+                  null,
+                  undefined,
+                  {
+                    name: "swab",
+                  }
+                ]
                 
-                if (age >= 18) {
-                  console.log("You are old enough to drive");
-                } else {
-                  console.log(`You are left with ${ageOldEnough} years to drive`);
-                }
+                console.log(mixedDataTypes);
           </pre>
         </li>
-        <li>Compare the values of myAge and yourAge using if … else. Based on the comparison and log the result to console stating who is older (me or you). Use prompt(“Enter your age:”) to get the age as input.
-          <pre>
-            Enter your age: 30
-            You are 5 years older than me.
-          </pre>
+        <li>Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
           <pre style="color: #ccc">
-            //  const myAge = prompt("Enter Here", "Enter your age:");
-                const yourAge = 35;
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+          </pre>
+        </li>
+        <li>Print the array using console.log()
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
                 
-                if (myAge < yourAge) {
-                  console.log(`You are ${yourAge - myAge} years older than me.`);
-                }
+                console.log(itCompanies);
           </pre>
         </li>
-        <li>If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement it in to ways
-          <pre>
-            - using if else
-            - ternary operator.
-
-            let a = 4
-            let b = 3
-
-            4 is greater than 3
-          </pre>
+        <li>Print the number of companies in the array
           <pre style="color: #ccc">
-            //  let a = 4
-                let b = 3
-
-                // using if else
-                if (a > b) {
-                  console.log(`${a} is greater than ${b}`);
-                } else {
-                  console.log(`${a} is less than ${b}`);
-                }
-
-                // using ternary operator
-                a > b ? console.log(`${a} is greater than ${b}`) : console.log(`${a} is less than ${b}`);
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+                
+            console.log(itCompanies.length);
           </pre>
         </li>
-        <li>Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
-          <pre>
-            Enter a number: 2
-            2 is an even number
+        <li>Print the first company, middle and last company
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
 
-            Enter a number: 9
-            9 is is an odd number.
+                console.log(`First Item: ${itCompanies[0]}`);
+                console.log(`Middle Item: ${itCompanies[3]}`);
+                console.log(`Last Item: ${itCompanies[6]}`);
           </pre>
-          <pre style="color: #ccc"> 
-            //  const num = prompt("Enter Here", "Enter a number:");
+        </li>
+        <li>Print out each company
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
 
-                if (num % 2 == 0) {
-                  console.log(`${num} is an even number.`);
+                console.log(itCompanies[0]);
+                console.log(itCompanies[1]);
+                console.log(itCompanies[2]);
+                console.log(itCompanies[3]);
+                console.log(itCompanies[4]);
+                console.log(itCompanies[5]);
+                console.log(itCompanies[6]);
+
+            //  Facebook
+                Google
+                Microsoft
+                Apple
+                IBM
+                Oracle
+                Amazon     
+          </pre>
+        </li>
+        <li>Change each company name to uppercase one by one and print them out
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                console.log(itCompanies[0].toUpperCase());
+                console.log(itCompanies[1].toUpperCase());
+                console.log(itCompanies[2].toUpperCase());
+                console.log(itCompanies[3].toUpperCase());
+                console.log(itCompanies[4].toUpperCase());
+                console.log(itCompanies[5].toUpperCase());
+                console.log(itCompanies[6].toUpperCase());
+
+            //  FACEBOOK
+                GOOGLE
+                MICROSOFT
+                APPLE
+                IBM
+                ORACLE
+                AMAZON
+          </pre>
+        </li>
+        <li>Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                console.log(`${itCompanies[0]}, ${itCompanies[1]}, ${itCompanies[2]}, ${itCompanies[3]}, ${itCompanies[4]}, ${itCompanies[5]} and ${itCompanies[6]} are big IT companies`)
+          </pre>
+        </li>
+        <li>Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+                const searchCompany = prompt("Enter Here", "Search Company:");
+
+                if (itCompanies.includes(searchCompany)) {
+                  console.log(searchCompany)
                 } else {
-                  console.log(`${num} is an odd number.`);
+                  console.log(`${searchCompany} is not found`);
                 }
           </pre>
         </li>
+        <li>Filter out companies which have more than one 'o' without the filter method
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+                let filteredCompanies = [];
+                
+                for (let i = 0; i < itCompanies.length; i++) {
+                
+                  if (itCompanies[i].search(/o+/g) > 0) {
+                    continue;
+                  } else {
+                    filteredCompanies.push(itCompanies[i]);
+                  }
+                
+                }
+            
+                console.log(filteredCompanies);
+          </pre>
+        </li>
+        <li>Sort the array using sort() method
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                console.log(itCompanies.sort());
+          </pre>
+        </li>
+        <li>Reverse the array using reverse() method
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                console.log(itCompanies.reverse());
+            
+            //  ['Amazon', 'Oracle', 'IBM', 'Apple', 'Microsoft', 'Google', 'Facebook']
+
+          </pre>
+        </li>
+        <li>Slice out the first 3 companies from the array
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                console.log(itCompanies.slice(3,itCompanies.length));
+
+            //  ['Apple', 'IBM', 'Oracle', 'Amazon'] 
+          </pre>
+        </li>
+        <li>Slice out the last 3 companies from the array
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                console.log(itCompanies.slice(0,3));
+
+            //  ['Facebook', 'Google', 'Microsoft']    
+          </pre>
+        </li>
+        <li>Slice out the middle IT company or companies from the array
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                console.log(itCompanies.slice(3,4));
+
+            // ['Apple']
+          </pre>
+        </li>
+        <li>Remove the first IT company from the array
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                itCompanies.shift(); 
+                console.log(itCompanies)
+
+            //  ['Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']    
+          </pre>
+        </li>
+        <li>Remove the middle IT company or companies from the array
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                itCompanies.splice(3, 1);
+                console.log(itCompanies)
+
+            //  ['Facebook', 'Google', 'Microsoft', 'IBM', 'Oracle', 'Amazon']    
+          </pre>
+        </li>
+        <li>Remove the last IT company from the array
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                itCompanies.pop();
+                console.log(itCompanies)
+
+            //  ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle']    
+          </pre>
+        </li>
+        <li>Remove all IT companies
+          <pre style="color: #ccc">
+            //  const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+
+                itCompanies.splice(0);
+                console.log(itCompanies)
+
+            // []    
+          </pre>
+        </li>
+
       </ol>
       <h3>Exercise: Level 2</h3>
       <ol>
-        <li>Write a code which can give grades to students according to theirs scores:
+        <li>Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
+          <pre style="color: #ccc"> 
+            aaaaaaaaaaaaaaaaaaaaaaaaaa
+          </pre>
+        </li>
+        <li>First remove all the punctuations and change the string to array and count the number of words in the array
           <pre>
-            - 80-100, A
-            - 70-89, B
-            - 60-69, C
-            - 50-59, D
-            - 0-49, F
+            let text =
+            'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+            console.log(words)
+            console.log(words.length)
+
+            ["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
+
+            13
           </pre>
           <pre style="color: #ccc"> 
-            const score = prompt("Enter Here", "Enter your score");
-
-            if (score >= 80 && score < 100) {
-              console.log("You got A")
-            } else if (score >= 70 && score < 80) {
-              console.log("You got B");
-            } else if (score >= 60 && score < 70) {
-              console.log("You got C");
-            } else if (score >= 50 && score < 60) {
-              console.log("You got D");
-            } else {
-              console.log("You got F");
-            }
+            aaaaaaaaaaaaaaaaaaaaaaaaaa
           </pre>
         </li>
-        <li>Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+        <li>In the following shopping cart add, remove, edit items
           <pre>
-            - September, October or November, the season is Autumn.
-            - December, January or February, the season is Winter.
-            - March, April or May, the season is Spring
-            - June, July or August, the season is Summer
+            const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+
+            - add 'Meat' in the beginning of your shopping cart if it has not been already added
+            - add Sugar at the end of you shopping cart if it has not been already added
+            - remove 'Honey' if you are allergic to honey
+            - modify Tea to 'Green Tea'
           </pre>
-          <pre style="color: #ccc">
-            //  const month = (prompt("Enter Here", "Enter the month here:")).toLowerCase();
-                let season = "";
-                
-                if (month === "september" || month === "october" || month === "november") {
-                      season = "Autumn";
-                    } else if (month === "december" || month === "january" || month === "febuary") {
-                      season = "Winter";
-                    } else if (month === "march" || month === "april" ||  month === "may") {
-                      season = "Spring";
-                    } else if (month === "june" || month === "july" ||  month === "august") {
-                      season = "Summer";
-                    }
-                
-                console.log(`${month.toUpperCase()} is a season of ${season}`);
+          <pre style="color: #ccc"> 
+            aaaaaaaaaaaaaaaaaaaaaaaaaa
           </pre>
         </li>
-        <li>Check if a day is weekend day or a working day. Your script will take day as an input.
-          <pre>
-            What is the day  today? Saturday
-            Saturday is a weekend.
-        
-            What is the day today? saturDaY
-            Saturday is a weekend.
-        
-            What is the day today? Friday
-            Friday is a working day.
-        
-            What is the day today? FrIDAy
-            Friday is a working day.
+        <li>In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+          <pre style="color: #ccc"> 
+            aaaaaaaaaaaaaaaaaaaaaaaaaa
           </pre>
-          <pre style="color: #ccc">
-            //  const day = (prompt("Enter Here", "What is the day today?")).toLowerCase();
+        </li>
+        <li>In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+          <pre style="color: #ccc"> 
+            aaaaaaaaaaaaaaaaaaaaaaaaaa
+          </pre>
+        </li>
+        <li>Concatenate the following two variables and store it in a fullStack variable.
+          <pre>
+            const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+            const backEnd = ['Node','Express', 'MongoDB']
 
-                switch (day) {
-                  case "monday":
-                  case "tuesday":
-                  case "wednesday":
-                  case "thursday":
-                  case "friday":
-                    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a working day`)
-                    break;
-                  case "saturday":
-                  case "sunday":
-                    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a weekend`)
-                    break;
-                  default:
-                    console.log(`Input is invalid`);
-                }
+            console.log(fullStack)
+            
+            ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+          </pre>
+          <pre style="color: #ccc"> 
+            aaaaaaaaaaaaaaaaaaaaaaaaaa
           </pre>
         </li>
       </ol>
