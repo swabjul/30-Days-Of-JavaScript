@@ -58,12 +58,40 @@
       <ol>
         <li>Iterate 0 to 10 using for loop, do the same using while and do while loop
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  for (let i = 0; i < 11; i++) {
+                  console.log(i);
+                }
+                
+                i = 0;
+                while(i< 11) {
+                  console.log(i);
+                  i++
+                }
+                
+                i = 0
+                do {
+                  console.log(i)
+                  i++
+                } while (i < 11)
           </pre>
         </li>
         <li>Iterate 10 to 0 using for loop, do the same using while and do while loop
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  for (let i = 10; i >= 0; i--) {
+                  console.log(i);
+                }
+                
+                i = 10;
+                while(i >= 0) {
+                  console.log(i);
+                  i--;
+                }
+                
+                i = 10
+                do {
+                  console.log(i);
+                  i--;
+                } while (i >= 0 )
           </pre>
         </li>
         <li>Iterate 0 to n using for loop
@@ -85,7 +113,13 @@
             #######
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  let text = "#";
+
+                for (let i = 0; i < 7; i++) {
+                
+                  console.log(text);
+                  text += "#";
+                }
           </pre>
         </li>
         <li>Use loop to print the following pattern:
@@ -103,7 +137,10 @@
             10 x 10 = 100
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  for (let i = 0; i <= 10; i++) {
+              const prod = i * i;
+              console.log(`${i} x ${i} = ${prod}`) ;
+            }
           </pre>
         </li>
         <li>Using loop print the following pattern
@@ -122,28 +159,63 @@
             10   100   1000
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  console.log(`i    i^2    i^3`)
+
+                for (let i = 0; i <= 10; i++) {
+                  console.log(`${i}    ${i ** 2}    ${i ** 3}`);
+                }
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print only even numbers
-          <pre>
-            aaaaaaaaaaaaaaa
-          </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  for (let i = 0; i <= 100; i++) {
+
+                  if(i % 2 == 1) {
+                    continue;
+                  }
+                
+                  console.log(i);
+                
+                }
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print only odd numbers
-          <pre>
-            aaaaaaaaaaaaaaa
-          </pre>
+
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  for (let i = 0; i <= 100; i++) {
+            
+                  if(i % 2 == 0) {
+                    continue;
+                  }
+                
+                  console.log(i);
+
+                
+                }
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print only prime numbers
           <pre>
-            aaaaaaaaaaaaaaa
+            for (let num = 0; num <= 100; num++) {
+
+              let isPrime = true;
+            
+              if (num < 2) {
+                isPrime = false;
+              }
+            
+              for (let x = 2; x < num; x++) {
+                if (num % x === 0) {
+                  isPrime = false;
+                  break;
+                }
+              }
+            
+              if (isPrime === true) {
+                console.log(num)
+              }
+            
+            }
           </pre>
           <pre style="color: #ccc">
             //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -197,7 +269,6 @@
             //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           </pre>
         </li>
- 
       </ol>
       <h3>Exercise: Level 2</h3>
       <ol>
