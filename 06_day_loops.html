@@ -195,30 +195,27 @@
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print only prime numbers
-          <pre>
-            for (let num = 0; num <= 100; num++) {
-
-              let isPrime = true;
-            
-              if (num < 2) {
-                isPrime = false;
-              }
-            
-              for (let x = 2; x < num; x++) {
-                if (num % x === 0) {
-                  isPrime = false;
-                  break;
-                }
-              }
-            
-              if (isPrime === true) {
-                console.log(num)
-              }
-            
-            }
-          </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  for (let num = 0; num <= 100; num++) {
+
+                  let isPrime = true;
+                
+                  if (num < 2) {
+                    isPrime = false;
+                  }
+                
+                  for (let x = 2; x < num; x++) {
+                    if (num % x === 0) {
+                      isPrime = false;
+                      break;
+                    }
+                  }
+                
+                  if (isPrime === true) {
+                    console.log(num)
+                  }
+                
+                }
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print the sum of all numbers.
@@ -226,7 +223,13 @@
             The sum of all numbers from 0 to 100 is 5050.
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  let total = 0;
+
+                for (let num = 0; num <= 100; num++) {
+                  total += num;
+                }
+                
+                console.log(total);
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
@@ -234,7 +237,21 @@
             The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  let sumEvens = 0;
+                let sumOdds = 0;
+                
+                for (let num = 0; num <= 100; num++) {
+                
+                  if (num % 2 == 0) {
+                    sumEvens += num;
+                  } else {
+                    sumOdds += num;
+                  }
+                
+                }
+                
+                console.log(sumEvens);
+                console.log(sumOdds);
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
@@ -242,23 +259,53 @@
             [2550, 2500]
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  let total = [0, 0];
+
+                for (let num = 0; num <= 100; num++) {
+                
+                  if (num % 2 == 0) {
+                    total[0] += num;
+                  } else {
+                    total[1] += num;
+                  }
+                
+                }
+                
+                console.log(total);
           </pre>
         </li>
         <li>Develop a small script which generate array of 5 random numbers
-          <pre>
-            aaaaaaaaaaaaaaa
-          </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  let array = [];
+
+                for (let i = 0; i < 5; i ++) {
+                  const ranNum = Math.floor(Math.random() * (5 - 1) + 1);
+                  array.push(ranNum);
+                }
+                
+                console.log(array);
           </pre>
         </li>
         <li>Develop a small script which generate array of 5 random numbers and the numbers must be unique
           <pre>
-            aaaaaaaaaaaaaaa
+
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  const arr = [];
+
+                while (arr.length < 5) {
+
+                  const r = Math.floor((Math.random() * 5 - 1) +1);
+
+                  if (arr.indexOf(r) !== -1) {
+                    continue;
+                  }
+
+                  arr.push(r);
+
+                }
+
+                console.log(arr);
           </pre>
         </li>
         <li>Develop a small script which generate a six characters random id:
