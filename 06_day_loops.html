@@ -198,24 +198,24 @@
           <pre style="color: #ccc">
             //  for (let num = 0; num <= 100; num++) {
 
-                  let isPrime = true;
-                
-                  if (num < 2) {
-                    isPrime = false;
-                  }
-                
-                  for (let x = 2; x < num; x++) {
-                    if (num % x === 0) {
-                      isPrime = false;
-                      break;
-                    }
-                  }
-                
-                  if (isPrime === true) {
-                    console.log(num)
-                  }
-                
+                let isPrime = true;
+              
+                if (num < 2) {
+                  continue;
                 }
+              
+                for (let x = 2; x < num; x++) {
+                  if (num % x === 0) {
+                    isPrime = false;
+                    break;
+                  }
+                }
+              
+                if (isPrime === true) {
+                  console.log(num)
+                }
+              
+              }
           </pre>
         </li>
         <li>Use for loop to iterate from 0 to 100 and print the sum of all numbers.
@@ -313,81 +313,308 @@
             5j2khz
           </pre>
           <pre style="color: #ccc">
-            //  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            //  const chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+                const charLength = chars.length;
+                
+                let id = "";
+                counter = 0;
+                
+                while (counter < 6)  { 
+                  const r = Math.floor(Math.random() * charLength);
+                  id += chars.charAt(r);
+                  counter++;
+                }
+                
+                console.log(id);
           </pre>
         </li>
       </ol>
       <h3>Exercise: Level 2</h3>
       <ol>
-        <li>Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
-          <pre style="color: #ccc"> 
-            N/A
-          </pre>
-        </li>
-        <li>First remove all the punctuations and change the string to array and count the number of words in the array
+        <li>Develop a small script which generate any number of characters random id:
           <pre>
-            let text =
-            'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
-            console.log(words)
-            console.log(words.length)
-
-            ["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
-
-            13
+            fe3jo1gl124g
+            xkqci4utda1lmbelpkm03rba
           </pre>
           <pre style="color: #ccc"> 
-            //  let text ="I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
-                const words = (text.replace(/\,|\./g, "")).split(" ");
-                
-                console.log(words);
-                console.log(words.length);
+            //  const chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+                const charLength = chars.length;
+
+
+                let id = "";
+                counter = 0;
+
+                const randLimit = Math.floor((Math.random() * (24 - 12) ) + 12);
+
+                while (counter < randLimit)  { 
+                  const rn = Math.floor(Math.random() * charLength);;
+                  id += chars.charAt(rn);
+                  counter++;
+                }
+
+            console.log(id);
           </pre>
         </li>
-        <li>In the following shopping cart add, remove, edit items
+        <li>Write a script which generates a random hexadecimal number.
           <pre>
-            const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
-
-            - add 'Meat' in the beginning of your shopping cart if it has not been already added
-            - add Sugar at the end of you shopping cart if it has not been already added
-            - remove 'Honey' if you are allergic to honey
-            - modify Tea to 'Green Tea'
+            '#ee33df'
           </pre>
           <pre style="color: #ccc"> 
-            //  const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+            //  const hexChars = "0123456789abcdef";
+                const charLength = hexChars.length;
 
-                shoppingCart.unshift("Meat");
-                shoppingCart.push("Sugar");
-                shoppingCart.splice(shoppingCart.indexOf("Honey"),1);
-                shoppingCart[shoppingCart.indexOf("Tea ")] = "Green Tea";
-                
-                console.log(shoppingCart);
-            
+                let hex = "";
+
+                while (hex.length <= 6)  {
+
+                  if (hex.length < 1) {
+                    hex += "#";
+                  }
+
+                  const r = Math.floor(Math.random() * charLength);
+                  hex += hexChars.charAt(r);
+
+                }
+
+                console.log(hex);
           </pre>
         </li>
-        <li>In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+        <li>Write a script which generates a random rgb color number.
+          <pre>
+            rgb(240,180,80)
+          </pre>
+          <pre style="color: #ccc"> 
+            //  let r = Math.floor(Math.random() * 255);
+                let g = Math.floor(Math.random() * 255);
+                let b = Math.floor(Math.random() * 255);
+                
+                r = r <= 99 && r > 10? "0" + r : r ;
+                g = g <= 99 && g > 10 ? "0" + g : g ;
+                b = b <= 99 && b > 10 ? "0" + b : b ;
+                
+                r = r <= 9 ? "00" + r : r ;
+                g = g <= 9 ? "00" + g : g ;
+                b = b <= 9 ? "00" + b : b ;
+                
+                const rgb = `rgb(${r},${g},${b})`;
+                
+                console.log(rgb);
+          </pre>
+        </li>
+        <li>Using the above countries array, create the following new array.
+          <pre>
+            ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+          </pre>
           <pre style="color: #ccc"> 
             //  const countries = [
-                'Albania',
-                'Bolivia',
-                'Canada',
-                'Denmark',
-                'Ethiopia',
-                'Finland',
-                'Germany',
-                'Hungary',
-                'Ireland',
-                'Japan',
-                'Kenya'
-              ]
-
-            //  if (countries.includes("Ethiopia")) {
-                  console.log("ETHIOPIA")
-                } else {
-                  countries.push("Ethiopia");
-                }  
+                  'Albania',
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  'Japan',
+                  'Kenya'
+                ]
+                
+                const newCountries = countries.slice();
+                
+                console.log(newCountries);
           </pre>
         </li>
-        <li>In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+        <li>Using the above countries array, create an array for countries length'.
+          <pre>
+            [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+          </pre>
+          <pre style="color: #ccc"> 
+            //  const countries = [
+                  'Albania',
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  'Japan',
+                  'Kenya'
+                ]
+                
+                const countriesLength = [];
+                
+                for (let i = 0; i < countries.length; i++) {
+                
+                  countriesLength.push(countries[i].length);
+                
+                }
+                
+                console.log(countriesLength);
+          </pre>
+        </li>
+        <li>Use the countries array to create the following array of arrays:
+          <pre>
+            [
+              ['Albania', 'ALB', 7],
+              ['Bolivia', 'BOL', 7],
+              ['Canada', 'CAN', 6],
+              ['Denmark', 'DEN', 7],
+              ['Ethiopia', 'ETH', 8],
+              ['Finland', 'FIN', 7],
+              ['Germany', 'GER', 7],
+              ['Hungary', 'HUN', 7],
+              ['Ireland', 'IRE', 7],
+              ['Iceland', 'ICE', 7],
+              ['Japan', 'JAP', 5],
+              ['Kenya', 'KEN', 5]
+            ]
+          
+          </pre>
+          <pre style="color: #ccc"> 
+            //  const countries = [
+                  'Albania',
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  'Japan',
+                  'Kenya'
+                ]
+                
+                const countriesLength = [];
+                
+                for (let i = 0; i < countries.length; i++) {
+                  countriesLength.push([countries[i], countries[i].substring(0,3).toUpperCase(),countries[i].length]);
+                }
+                
+                console.log(countriesLength);
+          </pre>
+        </li>
+        <li>In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+          <pre>
+            ['Finland','Ireland', 'Iceland']
+          </pre>
+          <pre style="color: #ccc"> 
+            aaaaaaaaaaaaaaaa
+          </pre>
+        </li>
+        <li>In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+          <pre>
+            ['Albania', 'Bolivia','Ethiopia']
+          </pre>
+          <pre style="color: #ccc"> 
+            //  const countries = [
+                  'Albania',
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  'Iceland',
+                  'Japan',
+                  'Kenya'
+                ]
+                
+                const arrInclude = [];
+                
+                isInclude = false;
+                
+                for (let i = 0; i < countries.length; i++) {
+                  if (countries[i].includes("ia")) {
+                    isInclude = true;
+                  }
+                }
+                
+                if (isInclude === true) {
+                  for (let i = 0; i < countries.length; i++) {
+                    if (countries[i].includes("ia")) {
+                      arrInclude.push(countries[i])
+                    }   
+                  }
+                
+                  console.log(arrInclude);
+                } else {
+                  console.log("These countries end without ia");
+                }
+          
+          </pre>
+        </li>
+        <li>Using the above countries array, find the country containing the biggest number of characters.
+          <pre>
+            Ethiopia
+          </pre>
+          <pre style="color: #ccc"> 
+            //  const countries = [
+                  'Albania',
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  'Iceland',
+                  'Japan',
+                  'Kenya'
+                ]
+                
+                let biggestChar = countries[0];
+                
+                for (let i = 1; i < countries.length; i++) {
+                
+                  if(countries[i].length > biggestChar.length) {
+                    biggestChar = countries[i];
+                  }
+                
+                }
+                
+                console.log(biggestChar);
+          </pre>
+        </li>
+        <li>Using the above countries array, find the country containing only 5 characters.
+          <pre>
+            ['Japan', 'Kenya']
+          </pre>
+          <pre style="color: #ccc"> 
+            //  const countries = [
+                  'Albania',
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  'Iceland',
+                  'Japan',
+                  'Kenya'
+                ]
+                
+                let arr = [];
+                
+                for (let i = 1; i < countries.length; i++) {
+                
+                  if(countries[i].length === 5) {
+                    arr.push(countries[i]);
+                  }
+                
+                }
+                
+                console.log(arr);
+        </li>
+        <li>Find the longest word in the webTechs array
           <pre style="color: #ccc"> 
             //  const webTechs = [
                   'HTML',
@@ -399,329 +626,260 @@
                   'MongoDB'
                 ]
                 
-                if (webTechs.includes("Sass")) {
-                  console.log("Sass is a CSS preprocess");
-                } else {
-                  webTechs.push("Sass");
-                  console.log(webTechs);
+                let word = webTechs[0]
+                
+                for (let i = 1; i < webTechs.length; i++) {
+                
+                  if (webTechs[i].length > word.length) {
+                    word = webTechs[i];
+                  }
+                
+                }
+                
+                console.log(word);
+
+            //  Javascript
+          </pre>
+        </li>
+        <li>Use the webTechs array to create the following array of arrays:
+          <pre>
+            [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+          </pre>
+          <pre style="color: #ccc"> 
+            // const webTechs = [
+                'HTML',
+                'CSS',
+                'JavaScript',
+                'React',
+                'Redux',
+                'Node',
+                'MongoDB'
+              ]
+              
+              let newArr = [];
+              
+              for (let i = 0; i < webTechs.length; i++) {
+              
+                newArr.push([webTechs[i], webTechs[i].length]);
+              
+              }
+              
+              console.log(newArr);
+          </pre>
+        </li>
+        <li>An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+          <pre style="color: #ccc"> 
+            //  const mernStack = ["MongoDB", "Express", "React", "Node"];
+                let acro = "";
+                
+                
+                for (let i = 0; i < mernStack.length; i++) {
+                
+                  acro += mernStack[i].charAt(0);
+                
+                }
+                
+                console.log(acro);
+          </pre>
+        </li>
+        <li>Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+          <pre style="color: #ccc"> 
+            //  const arr = ["HTML","CSS","JS","React","Redux","Node","Express","MongoDB"];
+
+                for (const lang of arr) {
+                  console.log(lang);
                 }
           </pre>
         </li>
-        <li>Concatenate the following two variables and store it in a fullStack variable.
+        <li>This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+          <pre style="color: #ccc"> 
+            //  let fruit = ['banana', 'orange', 'mango', 'lemon'];
+                let reverseFruit = [];
+                
+                
+                for (let i = fruit.length - 1; i >= 0; i--) {
+                  reverseFruit.push(fruit[i]);
+                }
+                
+                console.log(reverseFruit);
+          </pre>
+        </li>
+        <li>Print all the elements of array as shown below.
           <pre>
-            const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
-            const backEnd = ['Node','Express', 'MongoDB']
-
-            console.log(fullStack)
-
-            ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+            const fullStack = [
+              ['HTML', 'CSS', 'JS', 'React'],
+              ['Node', 'Express', 'MongoDB']
+            ]
           </pre>
           <pre style="color: #ccc"> 
-            //  const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
-                const backEnd = ['Node','Express', 'MongoDB']
+            //  const fullStack = [
+                  ['HTML', 'CSS', 'JS', 'React'],
+                  ['Node', 'Express', 'MongoDB']
+                ]
                 
-                const fullStack = frontEnd.concat(backEnd);
                 
-                console.log(fullStack);
+                for (let i = 0; i < fullStack.length; i++) {
+                  const arr = fullStack[i];
+                
+                  for (let x = 0; x < arr.length; x++ ) {
+                    console.log(arr[x]);
+                  }
+                
+                }
           </pre>
         </li>
       </ol>
       <h3>Exercise: Level 3</h3>
+      <pre>
+        const countries = [
+          'Albania',
+          'Bolivia',
+          'Canada',
+          'Denmark',
+          'Ethiopia',
+          'Finland',
+          'Germany',
+          'Hungary',
+          'Ireland',
+          'Iceland',
+          'Japan',
+          'Kenya'
+        ]
+
+        const webTechs = [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'React',
+          'Redux',
+          'Node',
+          'MongoDB'
+        ]
+
+        const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+      </pre>
+
       <ol>
-        <li>The following is an array of 10 students ages:
-          <pre>
-            const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
-
-            - Sort the array and find the min and max age
-            - Find the median age(one middle item or two middle items divided by two)
-            - Find the average age(all items divided by number of items)
-            - Find the range of the ages(max minus min)
-            - Compare the value of (min - average) and (max - average), use abs() method 1.Slice the first ten countries from the countries array
+        <li>Copy countries array(Avoid mutation)
+          <pre style="color: #ccc">
+            const newCountries = countries.slice();
           </pre>
-          <pre style="color: #ccc"> 
-            //  Sort the array and find the min and max age
-                ages.sort();
+        </li>
+        <li>Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+          <pre style="color: #ccc">
+            //  const sortedCountries = countries.slice().sort();
 
-                let min = ages[0];
-                let max = ages[ages.length - 1];
+                console.log(countries);
+                console.log(sortedCountries);
+          </pre>
+        </li>
+        <li>Sort the webTechs array and mernStack array
+          <pre style="color: #ccc">
+            //  const webTechs = [
+                  'HTML',
+                  'CSS',
+                  'JavaScript',
+                  'React',
+                  'Redux',
+                  'Node',
+                  'MongoDB'
+                ];
                 
-                console.log(`Min: ${ages[0]}`);
-                console.log(`Max: ${ages[ages.length - 1]}`);
+                const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+                
+                console.log(webTechs.sort());
+                console.log(mernStack.sort());
+          </pre>
+        </li>
+        <li>Extract all the countries contain the word 'land' from the countries array and print it as array
+          <pre style="color: #ccc">
+            //  const newArr = [];
 
-            //  Find the median age(one middle item or two middle items divided by two)
-                if (ages.length % 2 === 0) {
-
-                  console.log(ages[ages.length / 2] , ages[(ages.length / 2) + 1])
-
-                } else {
-
-                  console.log(ages[Math.round(ages.length / 2)]);
-
+                for (let i = 0; i < countries.length; i++) {
+                  if (countries[i].includes("land")) {
+                    newArr.push(countries[i]);
+                  }
                 }
 
-            //  Find the average age(all items divided by number of items)
-                let sum = 0;
-
-                for (let i = 0; i < ages.length; i++) {
-                  sum += ages[i];
-                }
-
-                let totalAve = sum / ages.length;
-
-                console.log(totalAve);
-
-            //  22.8
-
-            //  Find the range of the ages(max minus min)
-                let min = ages[0];
-                let max = ages[ages.length - 1];
-                
-                console.log(`${min} - ${max}`)
-
-            //  19 - 26
-
-            //  Compare the value of (min - average) and (max - average), use abs() method.
-                console.log(Math.abs((min - totalAve)) === Math.abs((max - totalAve)));
+                console.log(newArr);
             
-            // false
+            //  ['Finland', 'Iceland', 'Ireland', 'Marshall Islands', 'Netherlands', 'New Zealand', 'Poland', 'Solomon Islands', 'Swaziland', 'Switzerland', 'Thailand']
           </pre>
         </li>
-        <li>Slice the first ten countries from the countries array.
-          <pre style="color: #ccc"> 
-            // const countries = [
-            'Afghanistan',
-            'Albania',
-            'Algeria',
-            'Andorra',
-            'Angola',
-            'Antigua and Barbuda',
-            'Argentina',
-            'Armenia',
-            'Australia',
-            'Austria',
-            'Azerbaijan',
-            'Bahamas',
-            'Bahrain',
-            'Bangladesh',
-            'Barbados',
-            'Belarus',
-            'Belgium',
-            'Belize',
-            'Benin',
-            'Bhutan',
-            'Bolivia',
-            'Bosnia and Herzegovina',
-            'Botswana',
-            'Brazil',
-            'Brunei',
-            'Bulgaria',
-            'Burkina Faso',
-            'Burundi',
-            'Cambodia',
-            'Cameroon',
-            'Canada',
-            'Cape Verde',
-            'Central African Republic',
-            'Chad',
-            'Chile',
-            'China',
-            'Colombi',
-            'Comoros',
-            'Congo (Brazzaville)',
-            'Congo',
-            'Costa Rica',
-            "Cote d'Ivoire",
-            'Croatia',
-            'Cuba',
-            'Cyprus',
-            'Czech Republic',
-            'Denmark',
-            'Djibouti',
-            'Dominica',
-            'Dominican Republic',
-            'East Timor (Timor Timur)',
-            'Ecuador',
-            'Egypt',
-            'El Salvador',
-            'Equatorial Guinea',
-            'Eritrea',
-            'Estonia',
-            'Ethiopia',
-            'Fiji',
-            'Finland',
-            'France',
-            'Gabon',
-            'Gambia, The',
-            'Georgia',
-            'Germany',
-            'Ghana',
-            'Greece',
-            'Grenada',
-            'Guatemala',
-            'Guinea',
-            'Guinea-Bissau',
-            'Guyana',
-            'Haiti',
-            'Honduras',
-            'Hungary',
-            'Iceland',
-            'India',
-            'Indonesia',
-            'Iran',
-            'Iraq',
-            'Ireland',
-            'Israel',
-            'Italy',
-            'Jamaica',
-            'Japan',
-            'Jordan',
-            'Kazakhstan',
-            'Kenya',
-            'Kiribati',
-            'Korea, North',
-            'Korea, South',
-            'Kuwait',
-            'Kyrgyzstan',
-            'Laos',
-            'Latvia',
-            'Lebanon',
-            'Lesotho',
-            'Liberia',
-            'Libya',
-            'Liechtenstein',
-            'Lithuania',
-            'Luxembourg',
-            'Macedonia',
-            'Madagascar',
-            'Malawi',
-            'Malaysia',
-            'Maldives',
-            'Mali',
-            'Malta',
-            'Marshall Islands',
-            'Mauritania',
-            'Mauritius',
-            'Mexico',
-            'Micronesia',
-            'Moldova',
-            'Monaco',
-            'Mongolia',
-            'Morocco',
-            'Mozambique',
-            'Myanmar',
-            'Namibia',
-            'Nauru',
-            'Nepal',
-            'Netherlands',
-            'New Zealand',
-            'Nicaragua',
-            'Niger',
-            'Nigeria',
-            'Norway',
-            'Oman',
-            'Pakistan',
-            'Palau',
-            'Panama',
-            'Papua New Guinea',
-            'Paraguay',
-            'Peru',
-            'Philippines',
-            'Poland',
-            'Portugal',
-            'Qatar',
-            'Romania',
-            'Russia',
-            'Rwanda',
-            'Saint Kitts and Nevis',
-            'Saint Lucia',
-            'Saint Vincent',
-            'Samoa',
-            'San Marino',
-            'Sao Tome and Principe',
-            'Saudi Arabia',
-            'Senegal',
-            'Serbia and Montenegro',
-            'Seychelles',
-            'Sierra Leone',
-            'Singapore',
-            'Slovakia',
-            'Slovenia',
-            'Solomon Islands',
-            'Somalia',
-            'South Africa',
-            'Spain',
-            'Sri Lanka',
-            'Sudan',
-            'Suriname',
-            'Swaziland',
-            'Sweden',
-            'Switzerland',
-            'Syria',
-            'Taiwan',
-            'Tajikistan',
-            'Tanzania',
-            'Thailand',
-            'Togo',
-            'Tonga',
-            'Trinidad and Tobago',
-            'Tunisia',
-            'Turkey',
-            'Turkmenistan',
-            'Tuvalu',
-            'Uganda',
-            'Ukraine',
-            'United Arab Emirates',
-            'United Kingdom',
-            'United States',
-            'Uruguay',
-            'Uzbekistan',
-            'Vanuatu',
-            'Vatican City',
-            'Venezuela',
-            'Vietnam',
-            'Yemen',
-            'Zambia',
-            'Zimbabwe'
-          ]
+        <li>Find the country containing the hightest number of characters in the countries array
+          <pre style="color: #ccc">
+            //  let word = countries[0];
 
-            //  console.log(countries.slice(0, 10))
-
-            //  ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria']
-          </pre>
-        </li>        
-        <li>Find the middle country(ies) in the countries array
-          <pre style="color: #ccc"> 
-            //  const midArray = Math.round(maxLength / 2);
-
-
-                console.log(countries[midArray - 1]);
-
-            //  Lesotho
-          </pre>
-        </li>
-        <li>Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
-          <pre style="color: #ccc"> 
-            //  const maxLength = countries.length;
-                const midArray = Math.round(maxLength / 2);
+                for (let i = 0; i < countries.length; i++) {
                 
-                let array1 = [];
-                let array2 = [];
+                  if(countries[i].length > word.length) {
+                    word = countries[i];
+                  }
                 
-                
-                if (maxLength % 2 === 0) {
-                  array1 = countries.slice(0, midArray);
-                  array2 = countries.slice(midArray);
-                }
-                else {
-                  array1 = countries.slice(0, midArray);
-                  array2 = countries.slice(midArray);
                 }
                 
-                console.log(array1);
-                console.log(array2);
+                console.log(word);
+
+            //  Central African Republic
           </pre>
         </li>
+        <li>Extract all the countries contain the word 'land' from the countries array and print it as array
+          <pre style="color: #ccc">
+            //  const newArr = [];
 
+                for (let i = 0; i < countries.length; i++) {
+                  if (countries[i].includes("land")) {
+                    newArr.push(countries[i]);
+                  }
+                }
+
+                console.log(newArr);
+            
+            //  ['Finland', 'Iceland', 'Ireland', 'Marshall Islands', 'Netherlands', 'New Zealand', 'Poland', 'Solomon Islands', 'Swaziland', 'Switzerland', 'Thailand']
+          </pre>
+        </li>
+        <li>Extract all the countries containing only four characters from the countries array and print it as array
+          <pre style="color: #ccc">
+            //  const fourWordCountries = [];
+
+                for (let i = 0; i < countries.length; i++) {
+                
+                  if (countries[i].length === 4) {
+                    fourWordCountries.push(countries[i]);
+                  }
+                
+                }
+                
+                console.log(fourWordCountries);
+            //  ['Chad', 'Cuba', 'Fiji', 'Iran', 'Iraq', 'Laos', 'Mali', 'Oman', 'Peru', 'Togo']
+          </pre>
+        </li>
+        <li>Extract all the countries containing two or more words from the countries array and print it as array
+          <pre style="color: #ccc">
+            //  const arr = [];
+
+                for (let i = 0; i < countries.length; i++) {
+                
+                  if (countries[i].length >= 2) {
+                    arr.push(countries[i]);
+                  }
+                
+                }
+                
+                console.log(arr);
+          </pre>
+        </li>
+        <li>Reverse the countries array and capitalize each country and stored it as an array
+          <pre style="color: #ccc">
+            //  const arr = countries.slice().reverse();
+
+                for (let i = 0; i < arr.length; i++) {
+                  arr[i] = arr[i].toUpperCase();
+                }
+                
+                console.log(arr);
+          </pre>
+        </li>
       </ol>
     </main>
   </div>
